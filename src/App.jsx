@@ -13,6 +13,7 @@ function App() {
     setguestOpinion({ ...guestOpinion, [feedbackType]: guestOpinion[feedbackType] + 1 });
   };
   const totalFeedback = guestOpinion.good + guestOpinion.bad + guestOpinion.neutral;
+  const percentOfPositiveFeedback = Math.round(((guestOpinion.good + guestOpinion.neutral) / totalFeedback) * 100);
   const handleResetButtonClick = () => {
     setguestOpinion({
       good: 0,
@@ -27,7 +28,7 @@ function App() {
      <h2> Модуль2. Віджет відгуків</h2> 
       <Description />
       <Options updateFeedback={updateFeedback} totalFeedbackNumber={totalFeedback} onResetButtonClick={handleResetButtonClick} />
-      {totalFeedback === 0 ? <Notification /> : <Feedback guestOpinion={guestOpinion} />}
+      {totalFeedback === 0 ? <Notification /> : <Feedback guestOpinion={guestOpinion} total={totalFeedback} positive={percentOfPositiveFeedback} />}
       
     </>
   )
