@@ -1,11 +1,11 @@
 import React from 'react'
-
+import css from './Description.module.css';
 function Description() {
   return (
       <div>
-          <h2>Sip Happens Café
+          <h2 className={css.cafeName}>Sip Happens Café
       </h2>
-          <p>Please leave your feedback about our service by selecting one of the options below.
+          <p className={css.guestRequest}>Please leave your feedback about our service by selecting one of the options below.
 </p>
       </div>
   )

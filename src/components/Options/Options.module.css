@@ -18,11 +18,15 @@
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.64px;
-  background: #4e75ff;
+  background: #284b3d74;
   color: #fff;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: transparent;
 }
 
-button:hover {
-  background: #6c8cff;
+.optionButton:hover {
+  background: #03561c;
+}
+.optionButton:focus {
+  outline: none;
 }
